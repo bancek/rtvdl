@@ -16,11 +16,11 @@ import (
 const indexHTML = `
 <html>
 <head>
-	<title>RTV DL</title>
+	<title>RTV 4D downloader</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
 </head>
 <body style="font-family: Arial; margin: 20px; color: #333">
-	<h1 style="margin: 0 0 20px; font-weight: bold; font-size: 24px">RTV DL</h1>
+	<h1 style="margin: 0 0 20px; font-weight: bold; font-size: 24px">RTV 4D downloader</h1>
 	<form method="post" action="/">
 		<div style="margin-bottom: 4px"><label for="url" style="font-weight: bold; font-size: 13px">URL:</label></div>
 		<div style="margin-bottom: 10px"><input type="url" id="url" name="url" style="font-size: 14px; padding: 8px 10px; width: 100%; border: 1px solid #333; box-shadow: none' border-radius: 0"></div>
