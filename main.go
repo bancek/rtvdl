@@ -143,6 +143,9 @@ func main() {
 				if httpStreamer == "" {
 					continue
 				}
+				if !strings.HasSuffix(httpStreamer, "/") {
+					httpStreamer += "/"
+				}
 				if height > bestHeight {
 					bestURL = httpStreamer + mediaFile.Filename
 					bestHeight = height
