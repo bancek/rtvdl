@@ -9,7 +9,6 @@ import (
 	"net/http"
 	"os"
 	"regexp"
-	"strconv"
 	"strings"
 )
 
@@ -56,8 +55,8 @@ type GetRecordingResponse struct {
 }
 
 type GetRecordingMediaFile struct {
-	Height    string
-	Width     string
+	Height    int
+	Width     int
 	Streamers map[string]string
 	Filename  string
 	MediaType string
@@ -135,10 +134,7 @@ func main() {
 				if mediaFile.MediaType != "MP4" {
 					continue
 				}
-				height, err := strconv.Atoi(mediaFile.Height)
-				if err != nil {
-					continue
-				}
+				height := mediaFile.Height
 				httpStreamer := mediaFile.Streamers["http"]
 				if httpStreamer == "" {
 					continue
